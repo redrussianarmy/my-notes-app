@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' show ReadContext;
 import 'package:mynotes/constants/routes.dart';
 import 'package:mynotes/enums/menu_action.dart';
+import 'package:mynotes/extensions/buildcontext/loc.dart';
 import 'package:mynotes/services/auth/auth_service.dart';
 import 'package:mynotes/services/auth/bloc/auth_bloc.dart';
 import 'package:mynotes/services/auth/bloc/auth_event.dart';
@@ -31,7 +32,7 @@ class _NotesViewState extends State<NotesView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Main UI'),
+          title: Text(context.loc.notes_title),
           actions: [
             IconButton(
               onPressed: () {
@@ -52,10 +53,10 @@ class _NotesViewState extends State<NotesView> {
                 }
               },
               itemBuilder: (context) {
-                return const [
+                return [
                   PopupMenuItem<MenuAction>(
                     value: MenuAction.logout,
-                    child: Text('Log out'),
+                    child: Text(context.loc.logout),
                   ),
                 ];
               },

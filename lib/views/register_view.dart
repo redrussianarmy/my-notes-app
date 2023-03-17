@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mynotes/constants/routes.dart';
+import 'package:mynotes/extensions/buildcontext/loc.dart';
 import 'package:mynotes/services/auth/auth_exceptions.dart';
-import 'package:mynotes/services/auth/auth_service.dart';
 import 'package:mynotes/services/auth/bloc/auth_bloc.dart';
 import 'package:mynotes/services/auth/bloc/auth_event.dart';
 import 'package:mynotes/services/auth/bloc/auth_state.dart';
@@ -41,36 +40,36 @@ class _RegisterViewState extends State<RegisterView> {
           if (state.exception is WeakPasswordAuthException) {
             await showErrorDialog(
               context,
-              'Weak password',
+              context.loc.weak_password,
             );
           } else if (state.exception is EmailAdreadyInUseAuthException) {
             await showErrorDialog(
               context,
-              'Email is already in use',
+              context.loc.email_is_already_in_use,
             );
           } else if (state.exception is GenericAuthException) {
             await showErrorDialog(
               context,
-              'Failed to register',
+              context.loc.failed_to_register,
             );
           } else if (state.exception is InvalidEmailAuthException) {
             await showErrorDialog(
               context,
-              'Invalid email',
+              context.loc.invalid_email,
             );
           }
         }
       },
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Register'),
+          title: Text(context.loc.register),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('Enter your email and password to see your notes!'),
+              Text(context.loc.register_desc),
               TextField(
                 controller: _email,
                 enableSuggestions: false,
@@ -78,7 +77,7 @@ class _RegisterViewState extends State<RegisterView> {
                 autofocus: true,
                 keyboardType: TextInputType.emailAddress,
                 decoration:
-                    const InputDecoration(hintText: 'Enter your email here'),
+                    InputDecoration(hintText: context.loc.email_placeholder),
               ),
               TextField(
                 controller: _password,
@@ -86,7 +85,7 @@ class _RegisterViewState extends State<RegisterView> {
                 enableSuggestions: false,
                 autocorrect: false,
                 decoration:
-                    const InputDecoration(hintText: 'Enter your password here'),
+                    InputDecoration(hintText: context.loc.password_placeholder),
               ),
               Center(
                 child: Column(
@@ -100,7 +99,7 @@ class _RegisterViewState extends State<RegisterView> {
                               password,
                             ));
                       },
-                      child: const Text('Register'),
+                      child: Text(context.loc.register),
                     ),
                     TextButton(
                       onPressed: () {
@@ -108,7 +107,7 @@ class _RegisterViewState extends State<RegisterView> {
                               const AuthEventLogOut(),
                             );
                       },
-                      child: const Text('Already registered? Login here!'),
+                      child: Text(context.loc.login_here),
                     ),
                   ],
                 ),
