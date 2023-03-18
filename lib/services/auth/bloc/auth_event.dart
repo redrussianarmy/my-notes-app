@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart' show immutable;
+import 'package:flutter/widgets.dart' show BuildContext;
 
 @immutable
 abstract class AuthEvent {
@@ -16,8 +17,13 @@ class AuthEventSendEmailVerification extends AuthEvent {
 class AuthEventLogIn extends AuthEvent {
   final String email;
   final String password;
+  final BuildContext context;
 
-  const AuthEventLogIn(this.email, this.password);
+  const AuthEventLogIn(
+    this.email,
+    this.password,
+    this.context,
+  );
 }
 
 class AuthEventRegister extends AuthEvent {

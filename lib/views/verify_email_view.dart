@@ -19,8 +19,14 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
         title: Text(context.loc.verify_email_title),
       ),
       body: Column(children: [
-        Text(context.loc.verify_email_desc1),
-        Text(context.loc.verify_email_desc2),
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Text(context.loc.verify_email_desc1),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Text(context.loc.verify_email_desc2),
+        ),
         TextButton(
           onPressed: () {
             context.read<AuthBloc>().add(

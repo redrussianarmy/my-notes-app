@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:mynotes/extensions/buildcontext/loc.dart';
 import 'package:mynotes/services/auth/auth_provider.dart';
 import 'package:mynotes/services/auth/bloc/auth_event.dart';
 import 'package:mynotes/services/auth/bloc/auth_state.dart';
@@ -100,11 +101,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
     // log in
     on<AuthEventLogIn>((event, emit) async {
+      final context = event.context;
       emit(
-        const AuthStateLoggedOut(
-            exception: null,
-            isLoading: true,
-            loadingText: 'Please wait while I log you in'),
+        AuthStateLoggedOut(
+          exception: null,
+          isLoading: true,
+          loadingText: context.loc.loading_login,
+        ),
       );
       final email = event.email;
       final password = event.password;

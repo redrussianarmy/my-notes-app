@@ -88,6 +88,7 @@ class _LoginViewState extends State<LoginView> {
                         AuthEventLogIn(
                           email,
                           password,
+                          context,
                         ),
                       );
                 },
