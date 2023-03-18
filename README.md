@@ -34,6 +34,3 @@ To get started with MyNotes, clone the repository to your local machine and open
 ## Built With
 - [Flutter](https://flutter.dev) - The mobile app SDK used
 - [Firebase](https://firebase.google.com) - The backend used for authentication and data storage
-
-## Authors
-John Doe - johndoe
