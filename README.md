@@ -1,16 +1,39 @@
-# mynotes
+# MyNotes - Personal Note Taking App
 
-A new Flutter project.
+MyNotes is a mobile application for taking personal notes. With MyNotes, users can create an account, save, edit and delete their notes. The app also supports user authentication and verification.
+
+## Features
+- User authentication
+- Email verification
+- Create, update and delete notes
+- Forgot password functionality
+- Authentication and Database operations are Firebase integrated.
+
+-![Main Page](assets/readme/main_page.png)
+-![Verify Email](assets/readme/verify_email.png)
+-![Loading](assets/readme/loading.png)
+-![Create Note](assets/readme/create_note.png)
+-![Notes List](assets/readme/notes_list.png)
 
 ## Getting Started
+To get started with MyNotes, clone the repository to your local machine and open the project in Android Studio.
 
-This project is a starting point for a Flutter application.
+```git clone https://github.com/redrussianarmy/my-notes-app.git```
 
-A few resources to get you started if this is your first Flutter project:
+## Prerequisites
+- Android Studio
+- Flutter SDK
+- Dart SDK
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installing
+1. Open the project in Android Studio or Visual Studio Code.
+2. Run the `pub get` command to download the required packages.
+3. Set up a Firebase project and add the `google-services.json` file to the app.
+4. Build and run the app.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Built With
+- [Flutter](https://flutter.dev) - The mobile app SDK used
+- [Firebase](https://firebase.google.com) - The backend used for authentication and data storage
+
+## Authors
+John Doe - johndoe
