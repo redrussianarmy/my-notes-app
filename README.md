@@ -8,6 +8,7 @@ MyNotes is a mobile application for taking personal notes. With MyNotes, users c
 - Create, update and delete notes
 - Forgot password functionality
 - Authentication and Database operations are Firebase integrated.
+- Supports English and Turkish languages.
 
 <a href="assets/readme/main_page.png"><img src="assets/readme/main_page.png" width="200"></a>
 <a href="assets/readme/verify_email.png"><img src="assets/readme/verify_email.png" width="200"></a>
