@@ -9,11 +9,11 @@ MyNotes is a mobile application for taking personal notes. With MyNotes, users c
 - Forgot password functionality
 - Authentication and Database operations are Firebase integrated.
 
--![Main Page](assets/readme/main_page.png)
--![Verify Email](assets/readme/verify_email.png)
--![Loading](assets/readme/loading.png)
--![Create Note](assets/readme/create_note.png)
--![Notes List](assets/readme/notes_list.png)
+<a href="assets/readme/main_page.png"><img src="assets/readme/main_page.png" width="200"></a>
+<a href="assets/readme/verify_email.png"><img src="assets/readme/verify_email.png" width="200"></a>
+<a href="assets/readme/loading.png"><img src="assets/readme/loading.png" width="200"></a>
+<a href="assets/readme/create_note.png"><img src="assets/readme/create_note.png" width="200"></a>
+<a href="assets/readme/notes_list.png"><img src="assets/readme/notes_list.png" width="200"></a>
 
 ## Getting Started
 To get started with MyNotes, clone the repository to your local machine and open the project in Android Studio.
